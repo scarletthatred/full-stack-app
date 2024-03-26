@@ -24,7 +24,9 @@
     } else if ( $interest_rate <= 0 ) {
         $error_message .= 'Interest rate must be greater than zero.<br>'; 
     } 
-    
+    elseif($interest_rate > 15){
+        $error_message .= 'The Intrest rate must be below 15 and above 0.<br>';
+    }   
     // validate years
     if ( $years === FALSE ) {
         $error_message .= 'Years must be a valid whole number.<br>';
@@ -72,5 +74,21 @@
         <label>Future Value:</label>
         <span><?php echo $future_value_f; ?></span><br>
     </main>
+    <style>
+    .footer {
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        z-index:10;
+    }
+    </style>
+    <div class = "footer">
+        <?php
+            $date=date('y-m-d');
+        echo $date;
+            ?>
+
+    </div>
+
 </body>
 </html>
