@@ -119,3 +119,9 @@ br {
 #add_product_form input[text] {
     width: 15em;
 }
+.text-box{
+    width:fit-content;
+    height:100px;
+    overflow-y:auto;
+    /* overflow-x: hidden; */
+}
